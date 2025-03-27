@@ -1,0 +1,35 @@
+# PowerApps Submit button code
+
+Set(
+    varFormData,
+    {
+        userName: TextInput1.Text,
+        userEmail: TextInput2.Text,
+        department: ComboBox1.Selected.Value,
+        agreement: CheckBox1.Value
+    }
+);
+
+YourFlowName.Run(JSON(varFormData, IncludeBinaryData));
+
+// Optional: Show success message
+Notify("Form submitted successfully!", NotificationType.Success)
+
+==================================Or Else =========================================
+
+Set(
+    varFormData,
+    {
+        userName: TextInput1.Text,
+        userEmail: TextInput2.Text,
+        department: ComboBox1.Selected.Value,
+        agreement: CheckBox1.Value
+    }
+);
+
+YourFlowName.Run(JSON(varFormData));
+
+Notify("Form submitted successfully!", NotificationType.Success)
+
+
+
