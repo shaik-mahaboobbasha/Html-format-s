@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+th, td {
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+.dark-blue {
+  background-color: #0066cc;
+  color: white;
+}
+.light-blue-bg {
+  background-color: #99ccff;
+}
+.light-blue-text {
+  color: #66b3ff;
+}
+.bold-text {
+  font-weight: bold;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+</style>
+</head>
+<body>
+<table>
+  <!-- Row 1 -->
+  <tr>
+    <td class="dark-blue">Row 1, Column 1</td>
+    <td class="light-blue-bg" colspan="3">Row 1, Column 2 (spans 3 cols)</td>
+  </tr>
+  
+  <!-- Row 2 -->
+  <tr>
+    <td class="bold-text">Row 2, Column 1</td>
+    <td class="bold-text light-blue-text">Row 2, Column 2</td>
+    <td class="bold-text">Row 2, Column 3</td>
+    <td class="bold-text">Row 2, Column 4</td>
+  </tr>
+  
+  <!-- Row 3 -->
+  <tr>
+    <td class="bold-text">Row 3, Column 1</td>
+    <td>Row 3, Column 2</td>
+    <td> Yeah, Awesome............
+      <a href="https://example.com/document.docx">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-word.png" class="icon" alt="Word">
+        Document.docx
+      </a>
+    </td>
+    <td>Row 3, Column 4</td>
+  </tr>
+  
+  <!-- Row 4 -->
+  <tr>
+    <td class="bold-text">Row 4, Column 1</td>
+    <td>Row 4, Column 2</td>
+    <td>
+      <a href="https://example.com/file.pdf">
+        <img src="https://img.icons8.com/color/48/000000/pdf.png" class="icon" alt="PDF">
+        File.pdf
+      </a>
+    </td>
+    <td>Row 4, Column 4</td>
+  </tr>
+  
+  <!-- Row 5 -->
+  <tr>
+    <td class="bold-text">Row 5, Column 1</td>
+    <td>Row 5, Column 2</td>
+    <td>
+      <a href="https://example.com/report.docx">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-word.png" class="icon" alt="Word">
+        Report.docx
+      </a>
+    </td>
+    <td>Row 5, Column 4</td>
+  </tr>
+  
+  <!-- Row 6 -->
+  <tr>
+    <td class="bold-text">Row 6, Column 1</td>
+    <td>Row 6, Column 2</td>
+    <td>
+      <a href="mailto:contact@example.com">
+        <img src="https://img.icons8.com/color/48/000000/email.png" class="icon" alt="Email">
+        contact@example.com
+      </a>
+    </td>
+    <td>Row 6, Column 4</td>
+  </tr>
+  
+  <!-- Row 7 -->
+  <tr>
+    <td class="bold-text">Row 7, Column 1</td>
+    <td>Row 7, Column 2</td>
+    <td>
+      <a href="https://example.com/guide.pdf">
+        <img src="https://img.icons8.com/color/48/000000/pdf.png" class="icon" alt="PDF">
+        Guide.pdf
+      </a>
+    </td>
+    <td>Row 7, Column 4</td>
+  </tr>
+  
+  <!-- Row 8 -->
+  <tr>
+    <td class="bold-text">Row 8, Column 1</td>
+    <td>Row 8, Column 2</td>
+    <td>
+      <a href="https://example.com/notes.docx">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-word.png" class="icon" alt="Word">
+        Notes.docx
+      </a>
+    </td>
+    <td>Row 8, Column 4</td>
+  </tr>
+</table>
+</body>
+</html>
