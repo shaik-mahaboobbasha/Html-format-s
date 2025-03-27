@@ -37,3 +37,19 @@ Set(
         ""
     )
 );
+
+
+Set(
+    varCleanedBase64,
+    With(
+        {
+            jsonData: JSON(PNGImage, JSONFormat.IncludeBinaryData),
+            base64Start: Find("base64,", JSON(PNGImage, JSONFormat.IncludeBinaryData)) + 7
+        },
+        Mid(
+            jsonData,
+            base64Start,
+            Len(jsonData) - base64Start - 1
+        )
+    )
+);
