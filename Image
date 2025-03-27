@@ -20,3 +20,20 @@ PowerAutomate.Run(
     emailSubject: "Email with PNG Image",
     imageBase64: varCleanedBase64
 );
+
+
+
+
+
+Set(
+    varCleanedBase64,
+    Substitute(
+        Mid(
+            JSON(PNGImage, JSONFormat.IncludeBinaryData),
+            Match("base64,", JSON(PNGImage, JSONFormat.IncludeBinaryData)) + 7,
+            Len(JSON(PNGImage, JSONFormat.IncludeBinaryData)) - Match("base64,", JSON(PNGImage, JSONFormat.IncludeBinaryData)) - 8
+        ),
+        "\"", 
+        ""
+    )
+);
