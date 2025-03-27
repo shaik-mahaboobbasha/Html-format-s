@@ -1,0 +1,22 @@
+Set(
+    varImageBase64, 
+    JSON(PNGImage, JSONFormat.IncludeBinaryData) // Replace "PNGImage" with your media control name
+);
+
+// Clean the Base64 string (remove JSON wrapper)
+Set(
+    varCleanedBase64,
+    Substitute(
+        Mid(varImageBase64, 25, Len(varImageBase64)-26),
+        "\"", 
+        ""
+    )
+);
+
+// Trigger Power Automate flow
+PowerAutomate.Run(
+    "Send_Email_With_Image", // Replace with your flow name
+    recipientEmail: "user@example.com",
+    emailSubject: "Email with PNG Image",
+    imageBase64: varCleanedBase64
+);
