@@ -1,0 +1,26 @@
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th style="padding: 8px; text-align: left;">MOR Intake</th>
+      <th style="padding: 8px; text-align: left;">Project Name</th>
+      <th style="padding: 8px; text-align: left;">PR Code</th>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">&nbsp;</td>
+      <td style="padding: 8px;">&nbsp;</td>
+      <td style="padding: 8px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">U MOR Decision</td>
+      <td colspan="2" style="padding: 8px;">
+        <!-- Green Checkbox -->
+        <span style="display: inline-block; width: 14px; height: 14px; border: 2px solid #4CAF50; margin-right: 5px;"></span> Yes
+        &nbsp;&nbsp;&nbsp;
+        <!-- Red Checkbox -->
+        <span style="display: inline-block; width: 14px; height: 14px; border: 2px solid #F44336; margin-right: 5px;"></span> No
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px;">Comments</td>
+      <td colspan="2" style="padding: 8px;">&nbsp;</td>
+    </tr>
+  </table>
