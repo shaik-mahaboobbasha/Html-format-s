@@ -1,0 +1,45 @@
+
+// Combobox properties
+Items: Filter('MOR SNOW Sys_User Datas', !IsBlank(Self.SearchText))
+DefaultSelectedItems: If(!IsBlank(varPopUpPM), {Value: varPopUpPM}, {Value: Parent.Default})
+OnChange: Set(varPM, Self.Selected.user_full_name); Set(varPopUpPM, Self.Selected.user_full_name)
+
+
+
+UpdateContext({UcProSumUserPopupLookUp: false});
+Switch(
+    UcControlId,
+    1,
+    Set(varPopUpPM, ThisItem.user_full_name);
+    Set(varPM, ThisItem.user_full_name);  // Don't blank this anymore
+    Reset(cmbPM);  // Reset the combobox to force refresh
+    Set(cmbPM.Selected, ThisItem);  // Explicitly set the combobox selection
+,
+    2,
+    Set(varPopUpSTO, ThisItem.user_full_name);
+    Set(varSTO, Blank()),
+    3,
+    Set(varPopUpORAnalyst, ThisItem.user_full_name);
+    Set(varORAnalyst, Blank()),
+    4,
+    Set(varPopupSTM, ThisItem.user_full_name);
+    Set(varSTM, Blank()),
+    5,
+    Set(varPopupSolConsultant, ThisItem.user_full_name);
+    Set(varSolConsultant, Blank()),
+    6,
+    Set(varPopUpCIOCloud, ThisItem.user_full_name);
+    Set(varCIOCloud, Blank())
+);
+Reset(txtAppCatSearch_2)
+
+
+If(
+    !IsBlank(varPM), 
+    varPM,  // Use the variable directly instead of combobox.Selected
+    If(
+        !IsBlank(varPopUpPM), 
+        varPopUpPM, 
+        Parent.Default
+    )
+)
