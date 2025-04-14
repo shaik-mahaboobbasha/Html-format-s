@@ -43,3 +43,37 @@ If(
         Parent.Default
     )
 )
+
+
+
+
+
+
+
+
+
+
+
+
+Filter('MOR SNOW Sys_User Datas', !IsBlank(Self.SearchText))
+If(
+    !IsBlank(varPM),
+    LookUp('MOR SNOW Sys_User Datas', user_full_name = varPM),
+    Blank()
+)
+If(
+    !IsBlank(Self.Selected),
+    Set(varPM, Self.Selected.user_full_name);
+    Set(varPopUpPM, Self.Selected.user_full_name),
+    Set(varPM, Blank());
+    Set(varPopUpPM, Blank())
+)
+Switch(
+    UcControlId,
+    1,
+    Set(varPopUpPM, ThisItem.user_full_name);
+    Set(varPM, ThisItem.user_full_name),
+    // same for others...
+)
+
+
