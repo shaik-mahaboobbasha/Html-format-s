@@ -1,0 +1,11 @@
+concat(
+  if(equals(actions('Action2')['status'], 'Failed'), 
+     concat('Action 2 failed: ', actions('Action2')['error']['message'], '\r\n'), 
+  ''),
+  if(equals(actions('Action4')['status'], 'Failed'), 
+     concat('Action 4 failed: ', actions('Action4')['error']['message'], '\r\n'), 
+  ''),
+  if(equals(actions('Action5')['status'], 'Failed'), 
+     concat('Action 5 failed: ', actions('Action5')['error']['message'], '\r\n'), 
+  '')
+)
