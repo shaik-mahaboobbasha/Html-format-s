@@ -9,3 +9,10 @@ concat(
      concat('Action 5 failed: ', actions('Action5')['error']['message'], '\r\n'), 
   '')
 )
+
+@and(
+     equals(outputs('Action_1')?['status'], 'Succeeded'),
+     equals(outputs('Action_2')?['status'], 'Succeeded'),
+     equals(outputs('Action_3')?['status'], 'Succeeded'),
+     equals(outputs('Action_4')?['status'], 'Succeeded')
+   )
