@@ -1,0 +1,50 @@
+Here’s a more professional and easy-to-understand version of your content:
+
+
+---
+
+Workflow Overview
+
+Step 1: Retrieve Data from the Main Table (MOR)
+
+We are capturing the following fields from the MOR - Main Table:
+
+MOR Number
+
+Appcat Number
+
+Appcat SLO Approval Status
+
+SLO Approval Status CO
+
+SLO Approval Status IR
+
+Project Gate
+
+MOR Origin
+
+MOR ID
+
+Engagement Type
+
+
+Step 2: Retrieve Data from Dataverse Table
+
+We are retrieving one specific field (SLM SLO Status) from the Dataverse Table named "MOR IDP SLM SLO Status Datas".
+
+Step 3: Populate Excel Table
+
+An Excel table is created with the range A1:J1, where:
+
+Columns A–G and I–J are populated with the corresponding fields from the MOR - Main Table.
+
+Column H is populated with the SLM SLO Status from the "MOR IDP SLM SLO Status Datas" table.
+
+
+Initially, we retrieve all rows from the MOR - Main Table and insert them into the Excel table, excluding the SLM SLO Status field, which is fetched separately and inserted into Column H based on a matching key (e.g., MOR ID).
+
+
+---
+
+Would you like a visual workflow diagram for this process as well?
+
